@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
-import QRCode from "react-qr-code";
+import { QRCodeSVG } from "qrcode.react";
 import { useNavigate } from "react-router-dom";
 
 function ParticleCanvas() {
@@ -65,7 +65,7 @@ function QRModal({ cert, onClose }) {
         <div style={{ color: "#00d4ff", fontWeight: 800, fontSize: "1rem", marginBottom: ".3rem" }}>Certificate QR Code</div>
         <div style={{ color: "#6b7280", fontSize: ".8rem", marginBottom: "1.5rem" }}>{cert.degree}</div>
         <div style={{ background: "#fff", padding: "16px", borderRadius: "16px", display: "inline-block", marginBottom: "1.2rem" }}>
-          <QRCode value={`${window.location.origin}/verify?hash=${cert.certHash}`} size={200} />
+          <QRCodeSVG value={`${window.location.origin}/verify?hash=${cert.certHash}`} size={200} />
         </div>
         <div style={{ color: "#6b7280", fontSize: ".68rem", fontFamily: "monospace", wordBreak: "break-all", marginBottom: "1.5rem" }}>{cert.certHash}</div>
         <div style={{ display: "flex", gap: ".8rem", justifyContent: "center" }}>
@@ -126,9 +126,53 @@ export default function StudentDashboard() {
 
   async function handleDownload(cert) {
     setDownloading(cert.id);
-    await new Promise(r => setTimeout(r, 1500));
-    toast.success("Certificate downloaded!");
-    setDownloading(null);
+    try {
+      const printWindow = window.open("", "_blank");
+      printWindow.document.write(`
+        <html>
+          <head>
+            <title>Certificate - ${cert.degree}</title>
+            <style>
+              body { font-family: Georgia, serif; background: #fff; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+              .cert { border: 8px double #0066cc; padding: 60px; max-width: 800px; width: 100%; text-align: center; position: relative; }
+              .title { font-size: 14px; letter-spacing: 4px; color: #0066cc; text-transform: uppercase; margin-bottom: 20px; }
+              .main { font-size: 42px; font-weight: bold; color: #1a1a2e; margin-bottom: 10px; }
+              .sub { font-size: 18px; color: #555; margin-bottom: 30px; }
+              .name { font-size: 36px; color: #0066cc; font-style: italic; border-bottom: 2px solid #0066cc; display: inline-block; padding: 0 40px 10px; margin-bottom: 20px; }
+              .degree { font-size: 22px; color: #333; margin-bottom: 10px; }
+              .university { font-size: 16px; color: #666; margin-bottom: 30px; }
+              .hash { font-size: 10px; color: #999; font-family: monospace; word-break: break-all; margin-top: 30px; border-top: 1px solid #eee; padding-top: 15px; }
+              .date { font-size: 14px; color: #666; margin-top: 10px; }
+              .seal { font-size: 60px; margin: 20px 0; }
+            </style>
+          </head>
+          <body>
+            <div class="cert">
+              <div class="title">Certificate of Achievement</div>
+              <div class="seal">🎓</div>
+              <div class="main">This is to certify that</div>
+              <div class="name">${cert.studentName}</div>
+              <div class="degree">has successfully completed</div>
+              <div class="sub">${cert.degree}</div>
+              <div class="university">${cert.university}</div>
+              <div class="date">Issued on: ${cert.issuedDate}</div>
+              <div class="hash">
+                🔗 Blockchain Verified<br/>
+                Hash: ${cert.certHash}<br/>
+                Issued by: ${cert.issuedBy}
+              </div>
+            </div>
+            <script>window.onload = function() { window.print(); }</script>
+          </body>
+        </html>
+      `);
+      printWindow.document.close();
+      toast.success("Certificate ready to download!");
+    } catch (err) {
+      toast.error("Download failed");
+    } finally {
+      setDownloading(null);
+    }
   }
 
   function handleLogout() {

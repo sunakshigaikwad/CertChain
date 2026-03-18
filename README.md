@@ -1,30 +1,35 @@
 # ⛓️ CertChain — Blockchain Certificate Verification System
 
-![CertChain Banner](screenshots/banner.png)
+![Banner](screenshots/banner.png)
 
 > A decentralized certificate verification system built on Polygon blockchain. Universities can issue tamper-proof certificates, students can view and share them, and employers can instantly verify authenticity.
 
 ---
 
-## 🚀 Live Demo
-- 🌐 Frontend: [Coming Soon]
-- 🔗 Smart Contract: [Polygon Amoy Testnet](https://amoy.polygonscan.com/address/0xCf72aAf8c72FAF40A8B54aFCc54E411962eeE723)
+## 📸 Screenshots
+
+### Login Page
+![Login](screenshots/login.png)
+
+### Admin Dashboard
+![Admin](screenshots/admin.png)
+
+### Manage Students
+![Manage Students](screenshots/manage-students.png)
+
+### Student Dashboard
+![Student](screenshots/student.png)
+
+### Employer Verification
+![Employer](screenshots/employer.png)
+
+### Verify Certificate
+![Verify](screenshots/verify.png)
 
 ---
 
-## 📸 Screenshots
-
-### Landing Page
-![Landing Page](screenshots/landing.png)
-
-### Admin Dashboard
-![Admin Dashboard](screenshots/admin.png)
-
-### Student Dashboard
-![Student Dashboard](screenshots/student.png)
-
-### Employer Verification
-![Employer Dashboard](screenshots/employer.png)
+## 🚀 Live Demo
+- 🔗 Smart Contract: [Polygon Amoy Testnet](https://amoy.polygonscan.com/address/0xCf72aAf8c72FAF40A8B54aFCc54E411962eeE723)
 
 ---
 
@@ -66,17 +71,9 @@ cd CertChain
 
 ### 2. Install dependencies
 ```bash
-# Backend
-cd backend
-npm install
-
-# Frontend
-cd ../frontend
-npm install
-
-# Smart Contract
-cd ../smart-contract
-npm install
+cd backend && npm install
+cd ../frontend && npm install
+cd ../smart-contract && npm install
 ```
 
 ### 3. Setup environment variables
@@ -92,25 +89,25 @@ JWT_SECRET=your_jwt_secret
 
 ### 4. Start the project
 
-**Terminal 1 — Start Hardhat blockchain:**
+**Terminal 1 — Hardhat blockchain:**
 ```bash
 cd smart-contract
 npx hardhat node
 ```
 
-**Terminal 2 — Deploy smart contract:**
+**Terminal 2 — Deploy contract:**
 ```bash
 cd smart-contract
 npx hardhat run scripts/deploy.js --network localhost
 ```
 
-**Terminal 3 — Start backend:**
+**Terminal 3 — Backend:**
 ```bash
 cd backend
 npm run dev
 ```
 
-**Terminal 4 — Start frontend:**
+**Terminal 4 — Frontend:**
 ```bash
 cd frontend
 npm run dev
@@ -125,24 +122,19 @@ http://localhost:5173
 
 ## 👥 User Roles
 
-### 🏛️ Admin (University)
+### 🏛️ Admin
 1. Register as Admin
 2. Create student accounts with roll numbers
 3. Issue certificates on blockchain
-4. View all issued certificates
 
 ### 🎓 Student
 1. Login with roll number
 2. View blockchain-verified certificates
-3. Download certificate as PDF
-4. Share via QR code
+3. Download as PDF or share via QR code
 
 ### 🏢 Employer
 1. Register as Employer
-2. Verify certificates via:
-   - PDF upload
-   - Certificate hash
-   - QR code scan
+2. Verify certificates via PDF upload, hash or QR code
 
 ---
 
@@ -150,14 +142,8 @@ http://localhost:5173
 ```
 CertChain/
 ├── frontend/          # React + Vite frontend
-│   └── src/
-│       └── pages/     # Dashboard pages
 ├── backend/           # Node.js + Express API
-│   ├── models/        # MongoDB models
-│   └── index.js       # Main server file
 └── smart-contract/    # Solidity smart contract
-    ├── contracts/     # CertChain.sol
-    └── scripts/       # Deploy scripts
 ```
 
 ---
@@ -170,36 +156,10 @@ CertChain/
 
 ---
 
-## 🤝 Contributing
-
-Pull requests are welcome! For major changes, please open an issue first.
-
----
-
 ## 📄 License
 
-MIT License — feel free to use this project!
+MIT License
 
 ---
 
-<p align="center">Made with ❤️ by Aditya Anand</p>
-```
-
----
-
-**To add screenshots:**
-
-1. Create a folder `C:\Users\admin\Desktop\CertChain\screenshots`
-2. Take screenshots of your app (press `Win + Shift + S`)
-3. Save them as:
-   - `screenshots/banner.png`
-   - `screenshots/landing.png`
-   - `screenshots/admin.png`
-   - `screenshots/student.png`
-   - `screenshots/employer.png`
-4. Then push to GitHub:
-```
-cd C:\Users\admin\Desktop\CertChain
-git add .
-git commit -m "Add README with screenshots"
-git push origin main
+<p align="center">Made by Aditya Anand</p>

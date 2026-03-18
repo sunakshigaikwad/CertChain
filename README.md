@@ -33,12 +33,6 @@
 ![Fake](screenshots/fake.png)
 
 ---
-
-## 🚀 Live Demo
-- 🔗 Smart Contract: [Polygon Amoy Testnet](https://amoy.polygonscan.com/address/0xCf72aAf8c72FAF40A8B54aFCc54E411962eeE723)
-
----
-
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
@@ -153,15 +147,6 @@ CertChain/
 ```
 
 ---
-
-## 🔗 Smart Contract
-
-- **Network:** Polygon Amoy Testnet
-- **Address:** `0xCf72aAf8c72FAF40A8B54aFCc54E411962eeE723`
-- **Explorer:** [View on Polygonscan](https://amoy.polygonscan.com/address/0xCf72aAf8c72FAF40A8B54aFCc54E411962eeE723)
-
----
-
 ## 📄 License
 
 Copyright © 2026 Aditya Anand. All Rights Reserved.

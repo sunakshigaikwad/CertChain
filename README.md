@@ -26,6 +26,12 @@
 ### Verify Certificate
 ![Verify](screenshots/verify.png)
 
+### Verified Certificate
+![Verified](screenshots/correct.png)
+
+### Fake Certificate Detection
+![Fake](screenshots/fake.png)
+
 ---
 
 ## 🚀 Live Demo
@@ -158,7 +164,8 @@ CertChain/
 
 ## 📄 License
 
-MIT License
+Copyright © 2026 Aditya Anand. All Rights Reserved.
+This project is not open source. No part of this project may be copied, modified, or distributed without permission.
 
 ---
 

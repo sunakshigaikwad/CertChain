@@ -1,4 +1,4 @@
-# ⛓️ CertChain — Blockchain Certificate Verification System
+# ⛓️ CertifyPro — Blockchain Certificate Verification System
 
 ![Banner](screenshots/banner.png)
 
@@ -65,8 +65,8 @@
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/Anand-Aditya-23/CertChain.git
-cd CertChain
+git clone https://github.com/Anand-Aditya-23/CertifyPro.git
+cd CertifyPro
 ```
 
 ### 2. Install dependencies
@@ -140,7 +140,7 @@ http://localhost:5173
 
 ## 📁 Project Structure
 ```
-CertChain/
+CertifyPro/
 ├── frontend/          # React + Vite frontend
 ├── backend/           # Node.js + Express API
 └── smart-contract/    # Solidity smart contract

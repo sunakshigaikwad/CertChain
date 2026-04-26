@@ -19,7 +19,7 @@ const upload = multer({ storage: multer.memoryStorage() });
 // ─── BLOCKCHAIN SETUP ─────────────────────────────────────
 
 // Load ABI and contract address
-const contractJSON    = require("./CertChainABI.json");
+const contractJSON    = require("./CertifyProABI.json");
 const contractABI     = contractJSON.abi;
 const deploymentInfo  = require("./contractAddress.json");
 const CONTRACT_ADDRESS = deploymentInfo.contractAddress;
@@ -54,7 +54,7 @@ function generateHash(fileBuffer) {
 // Health check
 app.get("/", (req, res) => {
   res.json({
-    status: "CertChain API is running ✅",
+    status: "CertifyPro API is running ✅",
     contractAddress: CONTRACT_ADDRESS
   });
 });
@@ -195,7 +195,7 @@ app.get("/api/verify/:hash", async (req, res) => {
 // ─── START SERVER ─────────────────────────────────────────
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`\n🚀 CertChain API running at http://localhost:${PORT}`);
+  console.log(`\n🚀 CertifyPro API running at http://localhost:${PORT}`);
   console.log(`📋 Contract: ${CONTRACT_ADDRESS}`);
   console.log(`🌐 Network: ${process.env.POLYGON_RPC}\n`);
 });

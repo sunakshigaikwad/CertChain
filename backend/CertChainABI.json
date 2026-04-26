@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
-  "contractName": "CertChain",
-  "sourceName": "contracts/CertChain.sol",
+  "contractName": "CertifyPro",
+  "sourceName": "contracts/CertifyPro.sol",
   "abi": [
     {
       "inputs": [],

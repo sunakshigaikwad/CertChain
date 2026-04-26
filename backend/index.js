@@ -28,7 +28,7 @@ mongoose.connect(MONGODB_URI)
   .catch((err) => console.error("❌ MongoDB Error:", err.message));
 
 // Blockchain Setup
-const contractJSON = require("./CertChainABI.json");
+const contractJSON = require("./CertifyProABI.json");
 const contractABI = contractJSON.abi;
 const deploymentInfo = require("./contractAddress.json");
 const CONTRACT_ADDRESS = deploymentInfo.contractAddress;
@@ -67,7 +67,7 @@ const verifyToken = (req, res, next) => {
 // Routes
 app.get("/", (req, res) => {
   res.json({
-    status: "CertChain API Running",
+    status: "CertifyPro API Running",
     contract: CONTRACT_ADDRESS,
     mongo: mongoose.connection.readyState === 1
   });
@@ -263,7 +263,7 @@ app.post("/api/admin/create-student", verifyToken, async (req, res) => {
     const newStudent = new User({
       name,
       rollNumber,
-      email: email || `${rollNumber}@certchain.edu`,
+      email: email || `${rollNumber}@CertifyPro.edu`,
       password,
       role: "student",
       degree: degree || null,
@@ -371,6 +371,6 @@ app.get("/api/certificates", verifyToken, async (req, res) => {
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`🚀 CertChain API at http://localhost:${PORT}`);
+  console.log(`🚀 CertifyPro API at http://localhost:${PORT}`);
   console.log(`📋 Contract: ${CONTRACT_ADDRESS}`);
 });

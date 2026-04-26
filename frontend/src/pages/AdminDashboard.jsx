@@ -225,7 +225,7 @@ export default function AdminDashboard() {
             </div>
             <div>
               <div style={{ color: "#f7f6f2", fontSize: ".8rem", fontWeight: 600 }}>{user.name || "Admin"}</div>
-              <div style={{ color: "#6b7280", fontSize: ".7rem" }}>{user.email || "admin@certchain.io"}</div>
+              <div style={{ color: "#6b7280", fontSize: ".7rem" }}>{user.email || "admin@CertifyPro.io"}</div>
             </div>
           </div>
           <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}

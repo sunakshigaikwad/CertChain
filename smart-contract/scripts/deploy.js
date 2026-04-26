@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 async function main() {
-  console.log("🚀 Deploying CertChain contract...");
+  console.log("🚀 Deploying CertifyPro contract...");
 
   // Get the deployer wallet
   const [deployer] = await ethers.getSigners();
@@ -14,11 +14,11 @@ async function main() {
   console.log("💰 Wallet balance:", ethers.formatEther(balance), "MATIC");
 
   // Deploy the contract
-  const CertChain = await ethers.getContractFactory("CertChain");
-  const certChain = await CertChain.deploy();
-  await certChain.waitForDeployment();
+  const CertifyPro = await ethers.getContractFactory("CertifyPro");
+  const CertifyPro = await CertifyPro.deploy();
+  await CertifyPro.waitForDeployment();
 
-  const contractAddress = await certChain.getAddress();
+  const contractAddress = await CertifyPro.getAddress();
   console.log("✅ Contract deployed at:", contractAddress);
 
   // Save the address so backend and frontend can use it

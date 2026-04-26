@@ -265,7 +265,7 @@ export default function LandingPage() {
           </div>
           <h1 className="lp-title">
             Chain of Trust
-            <span className="lp-title-grad">Secure and Transparent <br />Digital Certificate Verification using Blockchain</span>
+            {/* <span className="lp-title-grad">Certificate<br />Verification</span> */}
           </h1>
           <p className="lp-sub">
             Universities hash degrees on-chain. Employers verify in 3 seconds, for free.

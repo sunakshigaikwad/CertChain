@@ -199,7 +199,7 @@ export default function AdminDashboard() {
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <div style={{ width: 36, height: 36, borderRadius: 10, background: "linear-gradient(135deg,#0066cc,#00d4ff)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.1rem" }}>⛓️</div>
             <div>
-              <div style={{ color: "#f7f6f2", fontWeight: 800, fontSize: ".95rem" }}>CertChain</div>
+              <div style={{ color: "#f7f6f2", fontWeight: 800, fontSize: ".95rem" }}>CertifyPro</div>
               <div style={{ color: "#00d4ff", fontSize: ".65rem", letterSpacing: "1.5px", textTransform: "uppercase" }}>Admin Portal</div>
             </div>
           </div>

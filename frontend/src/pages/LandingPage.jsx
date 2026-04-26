@@ -264,8 +264,8 @@ export default function LandingPage() {
             Blockchain-Secured · Polygon · Free Forever
           </div>
           <h1 className="lp-title">
-            Tamper-Proof
-            <span className="lp-title-grad">Certificate<br />Verification</span>
+            Chain of Trust
+            <span className="lp-title-grad">Secure and Transparent <br />Digital Certificate Verification using Blockchain</span>
           </h1>
           <p className="lp-sub">
             Universities hash degrees on-chain. Employers verify in 3 seconds, for free.
@@ -300,7 +300,7 @@ export default function LandingPage() {
               {[
                 { n: "01", title: "🔐 Issue — University hashes the degree", desc: "Admin generates a SHA-256 hash of the certificate and stores it on Polygon blockchain via MetaMask. No paper, no middleman.", tag: "SHA-256 · MetaMask · Polygon Amoy" },
                 { n: "02", title: "📄 Embed — QR baked into the PDF", desc: "An auto-generated QR code is embedded into the certificate PDF, stored on IPFS and delivered to the graduate.", tag: "QR Code · IPFS · Web3.storage", delay: ".15s" },
-                { n: "03", title: "⚡ Verify — Employer scans, result instant", desc: "HR scans the QR. CertChain queries the smart contract and returns a tamper-detection result in under 3 seconds. Free forever.", tag: "Solidity · ethers.js · 3-second result", delay: ".3s" },
+                { n: "03", title: "⚡ Verify — Employer scans, result instant", desc: "HR scans the QR. CertifyPro queries the smart contract and returns a tamper-detection result in under 3 seconds. Free forever.", tag: "Solidity · ethers.js · 3-second result", delay: ".3s" },
               ].map((s, i) => (
                 <div className="t-step" key={i} style={{ transitionDelay: s.delay || "0s" }}>
                   <div className="t-num">{s.n}</div>
@@ -333,7 +333,7 @@ export default function LandingPage() {
         <section id="scenario" style={{ padding: "7rem 3rem", maxWidth: "1100px", margin: "0 auto" }}>
           <div className="lp-section-label lp-reveal">Real scenario</div>
           <h2 className="lp-section-title lp-reveal" style={{ transitionDelay: ".1s" }}>From graduation<br />to hired — on-chain.</h2>
-          <p className="lp-section-sub lp-reveal" style={{ transitionDelay: ".2s" }}>Rahul's journey from IIT Bombay to Google, powered by CertChain.</p>
+          <p className="lp-section-sub lp-reveal" style={{ transitionDelay: ".2s" }}>Rahul's journey from IIT Bombay to Google, powered by CertifyPro.</p>
           <div className="scenario-card lp-reveal" style={{ transitionDelay: ".3s" }}>
             <div className="sc-header">
               <span style={{ fontSize: "1.5rem" }}>🎓</span>
@@ -408,7 +408,7 @@ export default function LandingPage() {
         <footer className="lp-footer">
           <div className="lp-footer-logo">Cert<span>Chain</span></div>
           <div>Built on Polygon · IPFS · Solidity</div>
-          <div>© 2026 CertChain</div>
+          <div>© 2026 CertifyPro</div>
         </footer>
 
       </div>

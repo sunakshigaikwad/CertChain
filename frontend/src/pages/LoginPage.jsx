@@ -258,7 +258,7 @@ export default function LoginPage() {
                       <motion.h1 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.18 }}
                         style={{ fontSize: "2.6rem", fontWeight: 800, color: "#f7f6f2", letterSpacing: "-2px", lineHeight: 1, marginBottom: ".6rem" }}>
                         Welcome to<br />
-                        <span style={{ background: "linear-gradient(90deg,#4d78ff,#00d4ff)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>CertChain</span>
+                        <span style={{ background: "linear-gradient(90deg,#4d78ff,#00d4ff)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>CertifyPro</span>
                       </motion.h1>
                       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.26 }}
                         style={{ color: "#6b7280", fontSize: ".9rem" }}>
@@ -488,7 +488,7 @@ export default function LoginPage() {
           </div>
 
           <div style={{ padding: "1.2rem 3rem", borderTop: "1px solid rgba(255,255,255,0.05)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <span style={{ color: "#6b7280", fontSize: ".75rem" }}>⛓️ CertChain · HackNova 3.0</span>
+            <span style={{ color: "#6b7280", fontSize: ".75rem" }}>⛓️ CertifyPro · HackNova 3.0</span>
             <span style={{ color: "#6b7280", fontSize: ".75rem" }}>Built on Polygon · IPFS · Solidity</span>
           </div>
         </div>

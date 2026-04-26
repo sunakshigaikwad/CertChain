@@ -389,7 +389,7 @@ export default function IssuePage() {
                   <img src={result.qrCode} alt="QR" style={{ width: "160px", height: "160px", display: "block" }} />
                 </motion.div>
                 <br />
-                <motion.a whileHover={{ scale: 1.05 }} href={result.qrCode} download="certchain-qr.png"
+                <motion.a whileHover={{ scale: 1.05 }} href={result.qrCode} download="CertifyPro-qr.png"
                   style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "linear-gradient(135deg,rgba(26,76,255,0.2),rgba(0,212,255,0.1))", border: "1px solid rgba(26,76,255,0.35)", color: "#7ba8ff", padding: ".7rem 1.6rem", borderRadius: "10px", textDecoration: "none", fontSize: ".85rem", fontWeight: 700 }}>
                   ⬇ Download QR Code
                 </motion.a>

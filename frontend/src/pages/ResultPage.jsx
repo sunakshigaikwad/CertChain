@@ -195,7 +195,7 @@ export default function ResultPage() {
                       {[
                         "The certificate PDF may have been edited or tampered",
                         "The SHA-256 hash doesn't match any record on blockchain",
-                        "This certificate was never registered on CertChain",
+                        "This certificate was never registered on CertifyPro",
                       ].map((reason, i) => (
                         <div key={i} style={{ color: "#6b7280", fontSize: ".85rem", padding: ".4rem 0", borderBottom: i < 2 ? "1px solid rgba(255,50,50,0.08)" : "none", display: "flex", alignItems: "center", gap: "8px" }}>
                           <span style={{ color: "#ff4444" }}>→</span> {reason}
@@ -223,7 +223,7 @@ export default function ResultPage() {
                     <div style={{ width: "18px", height: "18px", borderRadius: "5px", background: "linear-gradient(135deg,#1a4cff,#00d4ff)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <span style={{ color: "#fff", fontSize: "8px", fontWeight: 700 }}>C</span>
                     </div>
-                    <span style={{ color: "#6b7280", fontSize: ".8rem", fontWeight: 600 }}>CertChain</span>
+                    <span style={{ color: "#6b7280", fontSize: ".8rem", fontWeight: 600 }}>CertifyPro</span>
                   </Link>
                   <div style={{ color: "#6b7280", fontSize: ".75rem" }}>
                     Verified on Polygon blockchain · {new Date().toLocaleDateString()}
